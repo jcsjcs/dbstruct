@@ -1,0 +1,28 @@
+databases:
+  a_postgres_db:
+    adapter:  postgresql
+    database: development
+    username: postgres
+    password: postgres
+    host:     localhost
+    port:     5432
+
+  a_mysql_db:
+    adapter:  mysql
+    database: development
+    username: mysql
+    password: mysql
+    socket:   /var/run/mysqld/mysqld.sock
+
+  a_jdbc_db:
+    adapter:  jdbcmssql
+    url:      jdbc:jtds:sqlserver://192.168.0.1/development
+    username: sqlserver
+    password: sqlserver
+
+  a_sqlite_db:
+    adapter:  sqlite3
+    database: /home/user/sqlite_test/development.sqlite3
+    pool:     5
+    timeout:  5000
+
