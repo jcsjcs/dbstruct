@@ -24,10 +24,6 @@ class Column
     @opts << ", :limit => #{adapter_column.limit}"         if adapter_column.limit && adapter_column.type == :string && adapter_column.limit != 255
   end
 
-  def as_migration_string
-    "    t.#{@type} :#{@name}#{@opts.join}"
-  end
-
   def <=>(other)
     @name <=> other.name
   end
@@ -43,8 +39,6 @@ class Table
   # Returns an array of columns in the table.
   def columns
     ActiveRecord::Base.connection.columns(@name).map {|c| Column.new(c) }
-  rescue
-    [['unknown', '???', '???']]
   end
 end
 
@@ -134,7 +128,6 @@ __END__
           <tr class="data">
             <td><strong><%= column.name %></strong></td><td><i><%= column.sql_type %></i></td><td><%= column.null %></td><td><%= column.default %></td>
           </tr>
-    <% if 1 == 2 %><tr colspan="4" class="data"><td><pre><%= column.as_migration_string %></pre></td></tr><% end %>
           <% end %>
           <tr><td colspan="4">&nbsp;</td></tr>
           <% end %>
