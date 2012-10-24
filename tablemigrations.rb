@@ -141,6 +141,7 @@ __END__
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Database tables as migrations</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   </head>
   <body>
     <h1>Choose a database</h1>
@@ -161,7 +162,8 @@ __END__
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Tables as migrations</title>
+    <title><%= @db_name %> db: Tables as migrations</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <style type="text/css">
       body { font-family: Arial, Helvetica, sans-serif; }
       table {border-collapse:collapse;} td {padding: 0 12px; color: #444;} th {color: #303030; font-size:120%; background:#B0C5E0; padding: 4px 8px 8px; text-align:left; border-top: thin solid #bbb; border-left: thin solid #bbb; border-bottom: thin solid #555; border-right: thin solid #555;} tr.data:hover {background:#B0C5E0;} #navigation { height: 400px; overflow-y: auto; border: thin solid #333; margin-top: 10px; padding-right: 10px; } #navigation li:hover { background: #B0C5E0; } #navigation ul { list-style: none; padding:0 10px; } .letter {font-size:20px;background:#B0C5E0;padding-left:20px;color:#333;border-bottom:thin solid #999;border-top:thin solid #aaa;} #navigation a {text-decoration: none; } .tables_list {float:left;} h2 {margin:0;padding:0;} div.rightbox {float:left;margin-left:20px;} div.fixbox {position:fixed;} strong {padding-left:10px;} .backlink {padding-left:10px;font-size:smaller;text-decoration: none;} .generator { width: 300px; font-family: Consolas,'Lucida Console','DejaVu Sans Mono',monospace; } pre { font-family: Consolas,'Lucida Console','DejaVu Sans Mono',monospace; }
